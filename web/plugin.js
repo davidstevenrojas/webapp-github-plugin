@@ -1349,19 +1349,23 @@
     // But we should also make sure that our github instance is not outdated (invalid client_id/access_token)
     getGithubClientIdOrToken(reset, goog.bind(function (err, credentials) {
       if (err || credentials.error) {
-        var errSufix = '';
+        var errMessage = '';
         if (credentials && credentials.error && credentials.error.indexOf('#HGCR')) {
-          errSufix = ' (HGCR)'
-        }
-
-        // Clear the oauth props so we won't show the login with github button (The github oauth flow is not available)
-        this.setErrorMessage(
-            '<div>' +
+          errMessage = '<div>' +
+              'The GitHub plugin cannot connect to GitHub.' +
+              'If you are the administrator of the application make sure proxy settings are properly ' +
+              'set in the <a target="_blank" href="admin.html#Proxy">administration page</a>.' +
+              '</div>';
+        } else {
+          errMessage = '<div>' +
               'The GitHub plugin is not configured properly.' +
               'If you are the administrator of the application make sure the Client ID and the ' +
               'Client Secret are properly set in the <a target="_blank" href="admin.html#Plugins">administration page</a>.' +
-              errSufix +
-            '</div>');
+              '</div>';
+        }
+
+        // Clear the oauth props so we won't show the login with github button (The github oauth flow is not available)
+        this.setErrorMessage(errMessage);
         this.setOauthProps(null);
         this.resetCredentials();
 
