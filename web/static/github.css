@@ -5,13 +5,11 @@
     background-size: cover;
 }
 .github-icon-octocat-large {
-  background-image: url('GitHub-Mark-Light-64px.png');
     width: 24px;
     height: 24px;
     vertical-align: middle;
 }
 .github-icon-octocat-small {
-    background-image: url('GitHub-Mark-Dark-16px.png');
     width: 16px;
     height: 16px;
     vertical-align: middle;
@@ -157,7 +155,6 @@ textarea.github-input {
 	font-weight: lighter;
 	background-size: contain;
     background-repeat: no-repeat;
-    background-image: url('GitHub-Mark-Light-64px.png');
     width: 26px;
     height: 24px;
 }
