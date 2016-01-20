@@ -1226,6 +1226,7 @@
         loginButtonContainer.innerHTML = '<a title="Click to login using your GitHub account" href="' + this.oauthProps.oauthUrl +
           '" id="github-oauth-button"><span class="github-icon-octocat-large"></span><span class="github-oauth-text">Re-login with GitHub</span></a>';
       }
+      loginButtonContainer.querySelector('.github-icon-octocat-large').style.backgroundImage = 'url("' + sync.util.computeHdpiIcon('../plugin-resources/github-static/LogoToolbar.png') + '")';
     }
 
     var errorMessageElement = this.loginDialog.getElement().querySelector('.github-login-dialog-error');

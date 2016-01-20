@@ -129,6 +129,7 @@ textarea.github-input {
 
 .github-oauth-text {
     margin-left: 5px;
+    vertical-align: middle;
 }
 
 .github-login-center-aligned {
