@@ -1128,11 +1128,6 @@
     }
   };
 
-  /** @override */
-  CommitAction.prototype.getDescription = function() {
-    return "Commit on GitHub";
-  };
-
   /**
    * Loads the github-specific CSS.
    */

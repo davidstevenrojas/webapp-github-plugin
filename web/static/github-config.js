@@ -18,6 +18,9 @@ ghEnterpriseCheckbox.addEventListener('change', function (e) {
 });
 
 var hostname = window.location.hostname;
+if (hostname == 'localhost') {
+  hostname = "YOUR-DOMAIN-NAME-HERE"
+}
 
 var webAuthorContext = window.location.protocol + "//" + '<span style="color:#D61564;text-decoration:underline">' + hostname + '</span>' +
   (window.location.port ? ':' + window.location.port : '');
@@ -34,14 +37,4 @@ webAuthorContext += pathName;
 var webAuthorContextSpans = document.getElementsByClassName('web-author-context');
 for (var i = 0; i < webAuthorContextSpans.length; i++) {
   webAuthorContextSpans[i].innerHTML = webAuthorContext;
-}
-
-// If the hostname is localhost we should add a small note telling
-// the user to make sure to use the domain name and not localhost
-if (hostname == 'localhost') {
-  var localhostClarifications = document.getElementsByClassName('localhost-clarification');
-  for (i = 0; i < localhostClarifications.length; i++) {
-    localhostClarifications[i].innerHTML = '<b>*</b><span style="color:#D61564;text-decoration:underline">' +
-      hostname + '</span> should be changed to your domain name.';
-  }
 }
