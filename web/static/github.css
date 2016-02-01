@@ -343,7 +343,7 @@ textarea.github-input {
     background-color: white;
 }
 .github-repo-ac > .ac-renderer {
-    max-height: 200px;
+    max-height: 135px;
     overflow: auto;
     -webkit-touch-overflow: scroll;
     box-sizing: border-box;
