@@ -6,7 +6,7 @@
  id="com.oxygenxml.examples.github.GitHubPlugin"
  name="GitHubPlugin"
  description="A plugin to enable the editing and committing of files from a GitHub repository."
- version="${project.version}"
+ version="${project.nosnapshot.version}"
  vendor="SyncRO"
  class="com.oxygenxml.examples.github.GitHubPlugin">
  <runtime>
