@@ -165,7 +165,7 @@ textarea.github-input {
 	content: '';
 	width: 26px;
     height: 24px;
-    background-image: url('spinner.svg');
+    background-image: url('spinner.svg') !important; /* Important to override the js style set */
     background-size: contain;
 }
 #gh-settings-branch-select.github-loading {
@@ -177,7 +177,7 @@ textarea.github-input {
 	content: '';
 	width: 26px;
     height: 24px;
-	background-image: url('Checkmark_green.svg');
+	background-image: url('Checkmark_green.svg') !important; /* Important to override the js style set */
 }
 
 .gh-commit-info-prolog {
